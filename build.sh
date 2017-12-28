@@ -1,6 +1,6 @@
-#!/bin/bash
-VERSION=$1
-IMAGE=asbjornenge/ubuntu-zero:16.04
-docker build -t $IMAGE-$VERSION .
-echo "DONE $IMAGE-$VERSION"
+#!/bin/sh
+GOVERSION=1.8
+IMAGE=go-zero
+docker build -t $IMAGE -t $IMAGE:$GOVERSION .
+echo "DONE $IMAGE:$GOVERSION"
 #docker push $IMAGE-$VERSION
